@@ -2,14 +2,9 @@ package main
 
 import "fmt"
 
-type Fraction struct {
-	Num   int
-	Denom int
-}
-
 func main() {
-	a := Fraction{Num: 6, Denom: 8}
-	b := Fraction{Num: 6, Denom: 8}
+	var a = fraction{Num: 6, Denom: 8}
+	b := fraction{Num: 6, Denom: 8}
 	//b := Fraction{Num=3, Denom=4}
 	fmt.Println(a)
 	// fmt.Println("")
@@ -21,7 +16,7 @@ func main() {
 	print("b: ", b.Num, " ", b.Denom)
 }
 
-func reduceRef(f *Fraction) {
+func reduceRef(f *fraction) {
 	n := f.Num
 	d := f.Denom
 	divisor := f.Num
@@ -44,7 +39,7 @@ func reduceRef(f *Fraction) {
 }
 
 //pass by value, turn in into pass by reference
-func reduceVal(f Fraction) Fraction {
+func reduceVal(f fraction) fraction {
 	// plan of action - figure out which one is smaller, and then test if a mod b == 0 and then just keep going down
 	// until the divisor is 1, and then say that you are done.
 
