@@ -69,3 +69,5 @@ func reduceVal(f Fraction) Fraction {
 	return f
 
 }
+
+// made a change
