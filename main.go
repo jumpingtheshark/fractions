@@ -3,17 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	var a = fraction{Num: 6, Denom: 8}
-	b := fraction{Num: 6, Denom: 8}
+	a := fraction{Num: 6, Denom: 8}
+	//b := fraction{Num: 6, Denom: 8}
 	//b := Fraction{Num=3, Denom=4}
 	fmt.Println(a)
 	// fmt.Println("")
-	a = reduceVal(a)
+	//a = reduceVal(a)
+	a.reduceClass()
 
 	print("a: ", a.Num, " ", a.Denom)
 	println("")
-	reduceRef(&b)
-	print("b: ", b.Num, " ", b.Denom)
+	//reduceRef(&b)
+	//	print("b: ", b.Num, " ", b.Denom)
 }
 
 func reduceRef(f *fraction) {
@@ -21,7 +22,7 @@ func reduceRef(f *fraction) {
 	d := f.Denom
 	divisor := f.Num
 	for true {
-		fmt.Println("trying ", divisor)
+		//fmt.Println("trying ", divisor)
 		if n%divisor == 0 && d%divisor == 0 {
 			n = n / divisor
 			d = d / divisor
