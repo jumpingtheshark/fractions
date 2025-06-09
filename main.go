@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	a := fraction{Num: 6, Denom: 8}
+	a := fraction{Num: 10, Denom: 8}
 	//b := fraction{Num: 6, Denom: 8}
 	//b := Fraction{Num=3, Denom=4}
 	fmt.Println(a)
