@@ -9,7 +9,7 @@ func main() {
 	fmt.Println(a)
 	// fmt.Println("")
 	//a = reduceVal(a)
-	a.reduceClass()
+	a.reduceMe()
 
 	print("a: ", a.Num, " ", a.Denom)
 	println("")
@@ -39,7 +39,7 @@ func reduceRef(f *fraction) {
 
 }
 
-//pass by value, turn in into pass by reference
+// pass by value, turn in into pass by reference
 func reduceVal(f fraction) fraction {
 	// plan of action - figure out which one is smaller, and then test if a mod b == 0 and then just keep going down
 	// until the divisor is 1, and then say that you are done.

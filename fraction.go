@@ -7,7 +7,7 @@ type fraction struct {
 	Denom int
 }
 
-func (f *fraction) reduceClass() {
+func (f *fraction) reduceMe() {
 	n := f.Num
 	d := f.Denom
 	divisor := f.Num
