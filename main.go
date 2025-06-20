@@ -3,24 +3,25 @@ package main
 import "fmt"
 
 func main() {
-	a := fraction{Num: 10, Denom: 8}
-	//b := fraction{Num: 6, Denom: 8}
-	//b := Fraction{Num=3, Denom=4}
+	a := fraction{num: 10, denom: 8}
+	b := fraction{num: 6, denom: 8}
+	b = fraction{num: 3, denom: 4}
 	fmt.Println(a)
 	// fmt.Println("")
 	//a = reduceVal(a)
 	a.reduceMe()
 
-	print("a: ", a.Num, " ", a.Denom)
+	print("a: ", a.num, " ", a.denom)
 	println("")
 	//reduceRef(&b)
 	//	print("b: ", b.Num, " ", b.Denom)
+	Gcd(&a, &b)
 }
 
 func reduceRef(f *fraction) {
-	n := f.Num
-	d := f.Denom
-	divisor := f.Num
+	n := f.num
+	d := f.denom
+	divisor := f.num
 	for true {
 		//fmt.Println("trying ", divisor)
 		if n%divisor == 0 && d%divisor == 0 {
@@ -33,9 +34,9 @@ func reduceRef(f *fraction) {
 
 		}
 	}
-	f.Num = n
-	f.Denom = d
-	println(f.Num, " ", f.Denom)
+	f.num = n
+	f.denom = d
+	println(f.num, " ", f.denom)
 
 }
 
@@ -44,9 +45,9 @@ func reduceVal(f fraction) fraction {
 	// plan of action - figure out which one is smaller, and then test if a mod b == 0 and then just keep going down
 	// until the divisor is 1, and then say that you are done.
 
-	n := f.Num
-	d := f.Denom
-	divisor := f.Num
+	n := f.num
+	d := f.denom
+	divisor := f.num
 	for true {
 		fmt.Println("trying ", divisor)
 		if n%divisor == 0 && d%divisor == 0 {
@@ -59,9 +60,9 @@ func reduceVal(f fraction) fraction {
 
 		}
 	}
-	f.Num = n
-	f.Denom = d
-	println(f.Num, " ", f.Denom)
+	f.num = n
+	f.denom = d
+	println(f.num, " ", f.denom)
 	return f
 
 }

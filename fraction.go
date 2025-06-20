@@ -3,14 +3,14 @@ package main
 import "fmt"
 
 type fraction struct {
-	Num   int
-	Denom int
+	num   int
+	denom int
 }
 
 func (f *fraction) reduceMe() {
-	n := f.Num
-	d := f.Denom
-	divisor := f.Num
+	n := f.num
+	d := f.denom
+	divisor := f.num
 	for true {
 		//	fmt.Println("trying ", divisor)
 		if n%divisor == 0 && d%divisor == 0 {
@@ -23,8 +23,8 @@ func (f *fraction) reduceMe() {
 
 		}
 	}
-	f.Num = n
-	f.Denom = d
-	println(f.Num, " ", f.Denom)
+	f.num = n
+	f.denom = d
+	println(f.num, " ", f.denom)
 
 }
