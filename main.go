@@ -21,4 +21,17 @@ func main() {
 	c := Add(a, b)
 	fmt.Println(a.show(), "+", b.show(), "=", c.show())
 
+	//now for no good reason let's add these things to a list
+
+	var fractions []fraction
+	fractions = append(fractions, a)
+	fractions = append(fractions, b)
+	fractions = append(fractions, c)
+	fmt.Println("fractions: ", fractions)
+
+	for _, v := range fractions {
+
+		fmt.Println(v.show())
+	}
+
 }
