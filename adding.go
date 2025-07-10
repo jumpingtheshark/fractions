@@ -7,6 +7,11 @@ func Gcd(a *fraction, b *fraction) {
 	//bb:=b
 	aa.denom = a.denom * b.denom
 	aa.num = a.num * b.denom
-	print(aa)
 
+}
+
+func Add(a fraction, b fraction) fraction {
+	c := fraction{-1, a.denom} //temporary -1 for now
+	c.num = a.num + b.num
+	return c
 }
