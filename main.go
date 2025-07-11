@@ -4,8 +4,8 @@ import "fmt"
 
 func main() {
 
-	a := fraction{num: 10, denom: 8}
-	b := fraction{num: 6, denom: 8}
+	a := fraction{num: 1, denom: 7}
+	b := fraction{num: 1, denom: 8}
 	b = b
 	// fmt.Println("")
 	//a = reduceVal(a)

@@ -10,6 +10,12 @@ type fraction struct {
 	denom int
 }
 
+func (f fraction) copy() fraction {
+	var ff fraction
+	ff.num = f.num
+	ff.denom = f.denom
+	return ff
+}
 func (f fraction) show() string {
 	a := strconv.Itoa(f.num) + "/" + strconv.Itoa(f.denom)
 	return a
